@@ -1,14 +1,14 @@
-import './App.css';
-import Payment from './Payment'
-import Completion from './Completion'
+import "./App.css";
+import Payment from "./Payment";
+import Completion from "./Completion";
 
-import {useEffect, useState} from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import {loadStripe} from '@stripe/stripe-js';
+import { loadStripe } from "@stripe/stripe-js";
 
 function App() {
-  const [ stripePromise, setStripePromise ] = useState(null);
+  const [stripePromise, setStripePromise] = useState(null);
 
   useEffect(() => {
     fetch("/config").then(async (r) => {
@@ -22,7 +22,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Payment stripePromise={stripePromise} />} />
-          <Route path="/completion" element={<Completion stripePromise={stripePromise} />} />
+          <Route
+            path="/completion"
+            element={<Completion stripePromise={stripePromise} />}
+          />
         </Routes>
       </BrowserRouter>
     </main>

@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
 
 :root {
-  --light-grey: #F6F9FC;
-  --dark-terminal-color: #0A2540;
-  --accent-color: #635BFF;
+  --light-grey: #f6f9fc;
+  --dark-terminal-color: #0a2540;
+  --accent-color: #635bff;
   --radius: 3px;
 }
 
 body {
   padding: 20px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   display: flex;
   justify-content: center;
   font-size: 1.2em;
@@ -52,7 +52,8 @@ button:disabled {
   cursor: none;
 }
 
-input, select {
+input,
+select {
   display: block;
   font-size: 1.1em;
   width: 100%;
@@ -69,29 +70,31 @@ a {
 }
 
 small {
-  font-size: .6em;
+  font-size: 0.6em;
 }
 
-fieldset, input, select {
+fieldset,
+input,
+select {
   border: 1px solid #efefef;
 }
 
 #payment-form {
-  border: #F6F9FC solid 1px;
+  border: #f6f9fc solid 1px;
   border-radius: var(--radius);
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%), 0 30px 60px -30px rgb(0 0 0 / 30%);
+  box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%),
+    0 30px 60px -30px rgb(0 0 0 / 30%);
 }
 
 #messages {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New';
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
   display: none; /* hide initially, then show once the first message arrives */
-  background-color: #0A253C;
-  color: #00D924;
+  background-color: #0a253c;
+  color: #00d924;
   padding: 20px;
   margin: 20px 0;
   border-radius: var(--radius);
-  font-size:0.7em;
+  font-size: 0.7em;
 }
-
