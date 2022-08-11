@@ -8,8 +8,10 @@ function Payment(props) {
   const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
-    fetch("/create-payment-intent")
+    fetch("/create-payment-intent", {
+      method: "POST",
+      body: JSON.stringify({}),
+    })
       .then((res) => res.json())
       .then(({ clientSecret }) => setClientSecret(clientSecret));
   }, []);

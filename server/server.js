@@ -21,7 +21,7 @@ app.get("/config", (req, res) => {
   });
 });
 
-app.get("/create-payment-intent", async (req, res) => {
+app.post("/create-payment-intent", async (req, res) => {
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       currency: "EUR",
