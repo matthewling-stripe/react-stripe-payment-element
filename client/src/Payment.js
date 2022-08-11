@@ -6,7 +6,7 @@ import CheckoutForm from "./CheckoutForm";
 function Payment(props) {
   return (
     <>
-      <h1>Payment</h1>
+      <h1>React Stripe and the Payment Element</h1>
     </>
   );
 }
