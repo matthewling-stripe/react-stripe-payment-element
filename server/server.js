@@ -21,26 +21,7 @@ app.get("/config", (req, res) => {
   });
 });
 
-app.get("/create-payment-intent", async (req, res) => {
-  try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      currency: "EUR",
-      amount: 1999,
-      automatic_payment_methods: { enabled: true },
-    });
-
-    // Send publishable key and PaymentIntent details to client
-    res.send({
-      clientSecret: paymentIntent.client_secret,
-    });
-  } catch (e) {
-    return res.status(400).send({
-      error: {
-        message: e.message,
-      },
-    });
-  }
-});
+app.get("/create-payment-intent", async (req, res) => {});
 
 app.listen(5252, () =>
   console.log(`Node server listening at http://localhost:5252`)
