@@ -11,9 +11,10 @@ function Payment(props) {
     fetch("/create-payment-intent", {
       method: "POST",
       body: JSON.stringify({}),
-    })
-      .then((res) => res.json())
-      .then(({ clientSecret }) => setClientSecret(clientSecret));
+    }).then(async (result) => {
+      var { clientSecret } = await result.json();
+      setClientSecret(clientSecret);
+    });
   }, []);
 
   return (
