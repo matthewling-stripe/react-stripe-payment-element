@@ -2,7 +2,6 @@ import "./App.css";
 import Payment from "./Payment";
 import Completion from "./Completion";
 
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
