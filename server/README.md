@@ -7,7 +7,7 @@ You can [🎥 watch a video](https://youtu.be/WG4ehXSEpz4) to see how this serve
 ## Requirements
 
 - Node v10+
-- [Configured .env file](../README.md)
+- Configured .env file
 
 ## How to run
 
@@ -31,4 +31,4 @@ npm install
 npm start
 ```
 
-3. The react frontend will be running on `localhost:3000`. Follow the instructions in the README there to install and start the frontend server.
+3. The react frontend will be running on `localhost:4242`. Follow the instructions in the README there to install and start the frontend server.
