@@ -9,10 +9,9 @@ function Payment(props) {
 
   useEffect(() => {
     fetch("/config").then(async (r) => {
-      const {publishableKey} = await r.json();
-
+      const { publishableKey } = await r.json();
       setStripePromise(loadStripe(publishableKey));
-    })
+    });
   }, []);
 
   useEffect(() => {
@@ -27,11 +26,12 @@ function Payment(props) {
 
   return (
     <>
-      <h1>React Stripe and the Payment Element</h1>
+   <h1>React Stripe and the Payment Element</h1>
       {stripePromise && clientSecret && (
       <Elements stripe={stripePromise} options={{ clientSecret }}>
         <CheckoutForm/>
       </Elements>
+      )}
       )}
     </>
   );

@@ -18,8 +18,9 @@ export default function CheckoutForm() {
       // Make sure to disable form submission until Stripe.js has loaded.
       return;
     }
-
+    
     setIsProcessing(true); 
+
 
     const { error } = await stripe.confirmPayment({
       elements,
@@ -36,7 +37,7 @@ export default function CheckoutForm() {
     }
 
     setIsProcessing(false);
-    
+
   };
 
   return (
