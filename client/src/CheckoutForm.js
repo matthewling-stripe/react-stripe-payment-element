@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
+import { useStripe, useElements } from '@stripe/react-stripe-js';
 import { PaymentElement } from "@stripe/react-stripe-js";
-import { useState } from "react";
-import { useStripe, useElements } from "@stripe/react-stripe-js";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -12,13 +12,15 @@ export default function CheckoutForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
     if (!stripe || !elements) {
       // Stripe.js has not yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
       return;
     }
+    
+    setIsProcessing(true); 
 
-    setIsProcessing(true);
 
     const { error } = await stripe.confirmPayment({
       elements,
@@ -35,6 +37,7 @@ export default function CheckoutForm() {
     }
 
     setIsProcessing(false);
+
   };
 
   return (
